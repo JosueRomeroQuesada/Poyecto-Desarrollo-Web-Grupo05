@@ -9,14 +9,17 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author emers
  */
 @Controller
-public class InicioController {
+public class IndexController {
     
     @GetMapping("/")
     public String inicio(Model model){      
-        return "Inicio";
+        return "index";
     }
     @GetMapping("/maps")
     public String inicio(){      
         return "maps";
     }
+
+    
+
 }

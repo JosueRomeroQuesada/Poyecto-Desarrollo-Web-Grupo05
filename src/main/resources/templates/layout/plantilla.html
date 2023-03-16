@@ -14,48 +14,63 @@
         <header th:fragment="header" class="header">   
             <nav class="navbar navbar-expand-sm navbar-warning bg-warning text-black mt-5 p-2">      
                 <div class="container">        
-                    <a class="navbar-brand" href="#">
-                       
+                    
+                        <a class="navbar-brand" href="#">
                         <img src="../imagenes/Imagen_logo.svg" alt="Logo" width="30" height="24">
-                          
-                            
-                    </a> 
+                    </a>
+                    
+                    
                     <button class="navbar-toggler" 
                             data-bs-toggle="collapse"
                             data-bs-target="#menu">  
                         <span class="navbar-toggler-icon"></span>  
-                    </button>                    <div id="menu" class="collapse navbar-collapse">  
-                        <ul class="navbar-nav">    
-                            <li class="nav-item px-2">  
+                    </button> 
+                    
+                    
+                    <div id="menu" class="collapse navbar-collapse">  
+                        <ul class="navbar-nav">
+  
+                                   <li class="nav-item px-2">  
                                 <a class="nav-menu-link nav-link"
-                                   th:href="@{/cliente/listado}"
+                                   th:href="@{/}"
                                    >Monedero</a>                          
-                            </li>                            
+                            </li>           
+                            
                             <li class="nav-item px-2"> 
                                 <a class="nav-menu-link nav-link"
                                    th:href="@{/articulo/listado}"
                                    >Cartucheras</a>      
                             </li>  
+                            
                             <li class="nav-item px-2"> 
                                 <a class="nav-menu-link nav-link"
                                    th:href="@{/categoria/listado}"
                                    >Hogar</a>  
-                            </li>   
+                            </li> 
+                            
                             <li class="nav-item px-2"> 
                                 <a class="nav-menu-link nav-link"
                                    th:href="@{/categoria/listado}"
                                    >Quilt</a>  
                             </li>
+                            
                             <li class="nav-item px-2"> 
                                 <a class="nav-menu-link nav-link"
                                    th:href="@{/categoria/listado}"
                                    >Color</a>  
                             </li> 
+                            
                             <li class="nav-item px-2"> 
                                 <a class="nav-menu-link nav-link"
-                                   href="maps"
+                                   th:href="@{/maps}"
                                    >Google maps</a>  
-                            </li> 
+                            </li>   
+                            
+                            <li class="nav-item px-2">
+                                <a class="nav-menu-link nav-link"
+                                   th:href="@{/usuario/listado}"
+                                   >Clientes</a>
+                            </li>
                             
 
                         </ul>    

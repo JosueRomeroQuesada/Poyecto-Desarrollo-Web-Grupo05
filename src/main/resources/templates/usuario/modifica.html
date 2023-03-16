@@ -1,0 +1,114 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Mieleta-Registrarse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+        <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        
+        
+            <h2>Registrarse</h2>
+            <a th:href="@{/}">Regresar</a>
+        
+            <form th:action="@{/usuario/guardar}" 
+                  method="post" 
+                  th:object="${cedula}">
+                
+                
+                <input type="hidden" 
+                       name="cedula" 
+                       th:field="*{cedula}" />
+                
+                
+                <label>Nombre</label>
+                <input type="text" 
+                       name="Nombre" 
+                       value="" 
+                       th:field="*{nombre}" 
+                       size="30" />
+                <br>
+                
+                
+                <label>Apellidos</label>
+                <input type="text" 
+                       name="Apellidos" 
+                       value="" 
+                       th:field="*{apellidos}" 
+                       size="30" />                
+                <br>
+
+                
+                <label>fecha Nacimiento</label>
+                <input type="date" 
+                       name="fechaNacimiento" 
+                       value="" 
+                       th:field="*{fechaNacimiento}"
+                       size="30" />
+                <br>
+
+                
+                <label>Correo</label>
+                <input type="email" 
+                       name="Correo" 
+                       value="" 
+                       th:field="*{correo}" 
+                       size="30" />
+                <br>
+
+                
+                <label>Telefono</label>
+                <input type="tel" 
+                       name="Telefono" 
+                       value="" 
+                       th:field="*{telefono}" 
+                       size="10" />
+                <br>
+
+                
+                <label>Provincia</label>
+                <input type="text" 
+                       name="Provincia" 
+                       value="" 
+                       th:field="*{provincia}" 
+                       size="30" />                   
+                <br>
+                
+                
+                <label>Canton</label>
+                <input type="text" 
+                       name="Canton" 
+                       value="" 
+                       th:field="*{canton}" 
+                       size="30" />                   
+                <br>
+                
+                
+                <label>Distrito</label>
+                <input type="text" 
+                       name="Distrito" 
+                       value="" 
+                       th:field="*{distrito}" 
+                       size="30" />                   
+                <br>             
+
+                
+                <label>Otras senas</label>
+                <input type="text" 
+                       name="senas" 
+                       value="" 
+                       th:field="*{otrasSenas}" 
+                       size="50" />                   
+                <br>                
+                
+                    
+                <input type="submit" value="Guardar" />
+            </form>
+            
+            
+        <footer th:replace="~{layout/plantilla :: footer} "/>
+
+    </body>
+</html>
