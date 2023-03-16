@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Mieleta</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <article>
+
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <p class="fs-2">Google maps</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.013872794476!2d-84.08218607425397!3d9.932802224185904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e36750655857%3A0xe63edbbb42fd6737!2sC.%20Central%20Alfredo%20Volio%2C%20San%20Jos%C3%A9!5e0!3m2!1ses!2scr!4v1678935448163!5m2!1ses!2scr" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+
+                </iframe>
+                <a href="https://www.waze.com/en/live-map/directions/cr/san-jose/san-jose/calle-central-alfredo-volio?place=EjpDLiBDZW50cmFsIEFsZnJlZG8gVm9saW8sIEVsIENhcm1lbiwgU2FuIEpvc8OpLCBDb3N0YSBSaWNhIi4qLAoUChIJ1ftj7F3joI8RRV3lvQozx3ASFAoSCX1op8Vj46CPEeXZsWwroDRJ"
+                   class ="btn btn-primary"> Ir con waze </a>
+            </div>
+        </article>
+
+        <footer th:replace="~{layout/plantilla :: footer} "/>
+    </body>
+</html>

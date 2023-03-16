@@ -15,5 +15,8 @@ public class InicioController {
     public String inicio(Model model){      
         return "Inicio";
     }
-    
+    @GetMapping("/maps")
+    public String inicio(){      
+        return "maps";
+    }
 }
