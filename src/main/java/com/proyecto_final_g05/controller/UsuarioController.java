@@ -24,5 +24,29 @@ public class UsuarioController {
         return "usuario/listado";
     }
  
+    @GetMapping("/eliminar/{cedula}")
+    public String eliminaUsuario(Usuario usuario){
+        usuarioService.deleteUsuario(usuario);
+        return "redirect:/usuario/listado";
+    }
+    
+    @GetMapping("/nuevo")
+    public String nuevoUsuario(Usuario usuario){
+        return "/usuario/modifica";
+    }
+    
+    @PostMapping("/guardar")
+    public String guardarUsuario(Usuario usuario){
+        usuarioService.saveUsuario(usuario);
+        return "redirect:/usuario/listado";
+    }
+    
+    @GetMapping("/modificar/{cedula}")
+    public String modificaUsuario(Usuario usuario, Model model){
+        usuario = usuarioService.getUsuario(usuario);
+        model.addAttribute("usuario", usuario);
+        return "/usuario/modifica";
+    }
+
 
 }

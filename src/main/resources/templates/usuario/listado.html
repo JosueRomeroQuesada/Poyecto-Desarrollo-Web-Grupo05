@@ -8,56 +8,64 @@
         <header th:replace="~{layout/plantilla :: header}"/>
 
         <h2>Listado de usuarios</h2>
-            
-           
+
+
         <a th:href="@{/usuario/nuevo}"
            class="btn btn-primary"><i class="fas fa-user-plus"></i>Nuevo Usuario</a>
 
-           
+
         <div th:if="${usuarios !=null and !usuarios.empty}">
-            
+
             <table class="table table-strype">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
-                            <th>Fecha Nacimiento</th>
-                            <th>Correo</th>
-                            <th>Telefono</th>
-                            <th>Provincia</th>
-                            <th>Canton</th>
-                            <th>Distrito</th>
-                            <th>Otras Senas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="usuario : ${usuarios}">
-                            <td>[[${usuario.nombre}]]</td>
-                            <td>[[${usuario.apellidos}]]</td>
-                            <td>[[${usuario.fechaNacimiento}]]</td>
-                            <td>[[${usuario.correo}]]</td>
-                            <td>[[${usuario.telefono}]]</td>
-                            <td>[[${usuario.provincia}]]</td>
-                            <td>[[${usuario.canton}]]</td>
-                            <td>[[${usuario.distrito}]]</td>
-                            <td>[[${usuario.otrasSenas}]]</td>
-                            
-                    <a th:href="@{usuario/eliminar} + ${usuario.cedula}"
-                       class="btn btn-danger"><i class="fas fa-trash"></i>Eliminar</a>
-                            
-                    <a th:href="@{usuario/modificar} + ${usuario.cedula}"
-                       class="btn btn-success"><i class="fas fa-pen"></i>Modificar</a>        
-                            
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                        <th>Provincia</th>
+                        <th>Canton</th>
+                        <th>Distrito</th>
+                        <th>Otras Senas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="usuario : ${usuarios}">
+                        <td>[[${usuario.nombre}]]</td>
+                        <td>[[${usuario.apellidos}]]</td>
+                        <td>[[${usuario.fechaNacimiento}]]</td>
+                        <td>[[${usuario.correo}]]</td>
+                        <td>[[${usuario.telefono}]]</td>
+                        <td>[[${usuario.provincia}]]</td>
+                        <td>[[${usuario.canton}]]</td>
+                        <td>[[${usuario.distrito}]]</td>
+                        <td>[[${usuario.otrasSenas}]]</td>
+
+                        <td>
+                            <a th:href="@{usuario/eliminar} + ${usuario.cedula}"
+                               class="btn btn-danger">
+                                <i class="fas fa-trash">
+                                </i>Eliminar</a>
+
+                            <a th:href="@{usuario/modificar} + ${usuario.cedula}"
+                               class="btn btn-success">
+                                <i class="fas fa-pen">
+                                </i>Modificar</a>    
+
+                        </td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <div th:if ="${usuarios ==null or usuarios.empty}">
             <h3>no hay usuarios registrados</h3>
         </div>
-        
-        
+
+
         <footer th:replace="~{layout/plantilla :: footer} "/>
     </body>
 </html>
