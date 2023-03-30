@@ -1,0 +1,65 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Mieleta</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+
+        <h2>Listado de datosEnvios</h2>
+
+
+        <a th:href="@{/datosEnvio/nuevo}"
+           class="btn btn-primary"><i class="fas fa-user-plus"></i>Nuevo DatosEnvio</a>
+
+
+        <div th:if="${datosEnvios !=null and !datosEnvios.empty}">
+
+            <table class="table table-strype">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>id</th>
+                        <th>provincia</th>
+                        <th>ciudad</th>
+                        <th>calle</th>
+                       
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="datosEnvio : ${datosEnvios}">
+                        <td>[[${datosEnvio.idDatos}]]</td>
+                        <td>[[${datosEnvio.provincia}]]</td>
+                        <td>[[${datosEnvio.ciudad}]]</td>
+                        <td>[[${datosEnvio.calle}]]</td>
+                    
+                        
+
+                        <td>
+                            <a th:href="@{datosEnvio/eliminar} + ${datosEnvio.idDatos}"
+                               class="btn btn-danger">
+                                <i class="fas fa-trash">
+                                </i>Eliminar</a>
+
+                            <a th:href="@{datosEnvio/modificar} + ${datosEnvio.idDatos}"
+                               class="btn btn-success">
+                                <i class="fas fa-pen">
+                                </i>Modificar</a>    
+
+                        </td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div th:if ="${datosEnvios ==null or datosEnvios.empty}">
+            <h3>no hay datosEnvios registrados, solo se puede tener 1 direccion </h3>
+        </div>
+
+
+        <footer th:replace="~{layout/plantilla :: footer} "/>
+    </body>
+</html>

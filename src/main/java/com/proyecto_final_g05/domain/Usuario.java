@@ -26,12 +26,12 @@ public class Usuario implements Serializable{
     private String provincia;
     private String canton;
     private String distrito;
-    private String otrasSenas;
+    
 
     public Usuario() {
     }
 
-    public Usuario(String nombre, String apellidos, Date fechaNacimiento, String correo, String telefono, String provincia, String canton, String distrito, String otrasSenas) {
+    public Usuario(String nombre, String apellidos, Date fechaNacimiento, String correo, String telefono, String provincia, String canton, String distrito) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.fechaNacimiento = fechaNacimiento;
@@ -40,7 +40,7 @@ public class Usuario implements Serializable{
         this.provincia = provincia;
         this.canton = canton;
         this.distrito = distrito;
-        this.otrasSenas = otrasSenas;
+        
     }
     
 }

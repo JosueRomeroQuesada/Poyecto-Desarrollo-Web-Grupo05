@@ -12,6 +12,8 @@
 
         <a th:href="@{/usuario/nuevo}"
            class="btn btn-primary"><i class="fas fa-user-plus"></i>Nuevo Usuario</a>
+        <a th:href="@{/datosEnvio/listado}"
+           class="btn btn-primary"><i class="fas fa-user-plus"></i>Nuevo Usuario</a>
 
 
         <div th:if="${usuarios !=null and !usuarios.empty}">
@@ -27,7 +29,7 @@
                         <th>Provincia</th>
                         <th>Canton</th>
                         <th>Distrito</th>
-                        <th>Otras Senas</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +42,7 @@
                         <td>[[${usuario.provincia}]]</td>
                         <td>[[${usuario.canton}]]</td>
                         <td>[[${usuario.distrito}]]</td>
-                        <td>[[${usuario.otrasSenas}]]</td>
+                        
 
                         <td>
                             <a th:href="@{usuario/eliminar} + ${usuario.cedula}"
