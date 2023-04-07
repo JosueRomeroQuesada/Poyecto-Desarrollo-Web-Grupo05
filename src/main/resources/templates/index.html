@@ -7,6 +7,17 @@
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
         
+        <div class="container"> 
+            <div class="row row-cols-3"> 
+                <div class="card" th:each="publicacion : ${publicaciones}"> 
+                    <div class="card-body"> 
+                        <img th:src="${publicacion.imagen}" width="150px"/> 
+                        <h5 class="card-title">[[${publicacion.titular}]]</h5> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+        
         
         
        
