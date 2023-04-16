@@ -3,21 +3,22 @@ package com.proyecto_final_g05.domain;
 import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.Data;
+
 /**
  *
  * @author emers
  */
 @Data
 @Entity
-@Table(name = "quilt")
-public class Quilt implements Serializable {
+@Table(name = "articulo")
+public class Articulo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_quilt")
-    private Long idQuilt;
+    @Column(name = "id_articulo")
+    private Long idArticulo;
 
     private String descripcion;
     private String detalle; 
@@ -30,10 +31,10 @@ public class Quilt implements Serializable {
     @ManyToOne
     private Categoria categoria;
 
-    public Quilt() {
+    public Articulo() {
     }
 
-    public Quilt(String descripcion, String detalle, double precio, int existencias, String imagen, boolean activo, Categoria categoria) {
+    public Articulo(String descripcion, String detalle, double precio, int existencias, String imagen, boolean activo, Categoria categoria) {
         this.descripcion = descripcion;
         this.detalle = detalle;
         this.precio = precio;
@@ -42,4 +43,9 @@ public class Quilt implements Serializable {
         this.activo = activo;
         this.categoria = categoria;
     }
-    }
+    
+    
+
+    
+
+}

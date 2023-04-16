@@ -6,7 +6,7 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-        
+        <h3 style="text-align: center">Publicaciones nuevas</h3>
         <div class="container"> 
             <div class="row row-cols-3"> 
                 <div class="card" th:each="publicacion : ${publicaciones}"> 
@@ -17,6 +17,15 @@
                 </div> 
             </div> 
         </div>
+        <section th:replace="~{carrito/fragmentosCarrito :: listadoArticulos}"/>
+        <script>
+            function addCard(formulario){             
+              var valor=formulario.elements[0].value;                
+              var url = '/carrito/agregar';
+              url = url + '/' +valor;
+              $("#resultsBlock").load(url);         
+            }
+        </script>
         
         
         
