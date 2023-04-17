@@ -18,12 +18,12 @@ public class DatosEnvio implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idDatos;
     
-    private String provincia;
+    
     private String ciudad;
-    private Date calle; 
+    private String calle; 
 
-    public DatosEnvio(String provincia, String ciudad, Date calle) {
-        this.provincia = provincia;
+    public DatosEnvio( String ciudad, String calle) {
+        
         this.ciudad = ciudad;
         this.calle = calle;
     }

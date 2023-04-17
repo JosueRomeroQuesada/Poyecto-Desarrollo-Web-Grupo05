@@ -13,7 +13,9 @@
         <a th:href="@{/usuario/nuevo}"
            class="btn btn-primary"><i class="fas fa-user-plus"></i>Nuevo Usuario</a>
         <a th:href="@{/datosEnvio/listado}"
-           class="btn btn-primary"><i class="fas fa-user-plus"></i>Nuevo Usuario</a>
+           class="btn btn-primary"><i class="fas fa-user-plus"></i>Datos de envio</a>
+        <a th:href="@{/metodoPago/listado}"
+           class="btn btn-primary"><i class="fas fa-user-plus"></i>Metodos de pago</a>
 
 
         <div th:if="${usuarios !=null and !usuarios.empty}">

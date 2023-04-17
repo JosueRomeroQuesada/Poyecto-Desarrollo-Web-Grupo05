@@ -19,8 +19,7 @@
             <table class="table table-strype">
                 <thead class="thead-dark">
                     <tr>
-                        <th>id</th>
-                        <th>provincia</th>
+                        
                         <th>ciudad</th>
                         <th>calle</th>
                        
@@ -29,20 +28,19 @@
                 </thead>
                 <tbody>
                     <tr th:each="datosEnvio : ${datosEnvios}">
-                        <td>[[${datosEnvio.idDatos}]]</td>
-                        <td>[[${datosEnvio.provincia}]]</td>
+                                            
                         <td>[[${datosEnvio.ciudad}]]</td>
                         <td>[[${datosEnvio.calle}]]</td>
                     
                         
 
                         <td>
-                            <a th:href="@{datosEnvio/eliminar} + ${datosEnvio.idDatos}"
+                            <a th:href="@{/datosEnvio/eliminar/}+ ${datosEnvio.idDatos}"
                                class="btn btn-danger">
                                 <i class="fas fa-trash">
                                 </i>Eliminar</a>
 
-                            <a th:href="@{datosEnvio/modificar} + ${datosEnvio.idDatos}"
+                            <a th:href="@{/datosEnvio/modificar/} + ${datosEnvio.idDatos}"
                                class="btn btn-success">
                                 <i class="fas fa-pen">
                                 </i>Modificar</a>    

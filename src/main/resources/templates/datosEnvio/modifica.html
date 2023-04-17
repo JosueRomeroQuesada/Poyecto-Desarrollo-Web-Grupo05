@@ -15,89 +15,33 @@
         
             <form th:action="@{/datosEnvio/guardar}" 
                   method="post" 
-                  th:object="${cedula}">
+                  th:object="${idDatos}">
                 
                 
                 <input type="hidden" 
-                       name="cedula" 
-                       th:field="*{cedula}" />
+                       name="idDatos" 
+                       th:field="*{idDatos}" />
                 
                 
-                <label>Nombre</label>
+                <label>Ciudad</label>
                 <input type="text" 
-                       name="Nombre" 
+                       name="Ciudad" 
                        value="" 
-                       th:field="*{nombre}" 
+                       th:field="*{ciudad}" 
                        size="30" />
                 <br>
                 
                 
-                <label>Apellidos</label>
+                <label>calle</label>
                 <input type="text" 
-                       name="Apellidos" 
+                       name="calle" 
                        value="" 
-                       th:field="*{apellidos}" 
+                       th:field="*{calle}" 
                        size="30" />                
                 <br>
 
                 
-                <label>fecha Nacimiento</label>
-                <input type="date" 
-                       name="fechaNacimiento" 
-                       value="" 
-                       th:field="*{fechaNacimiento}"
-                       size="30" />
-                <br>
 
-                
-                <label>Correo</label>
-                <input type="email" 
-                       name="Correo" 
-                       value="" 
-                       th:field="*{correo}" 
-                       size="30" />
-                <br>
-
-                
-                <label>Telefono</label>
-                <input type="tel" 
-                       name="Telefono" 
-                       value="" 
-                       th:field="*{telefono}" 
-                       size="10" />
-                <br>
-
-                
-                <label>Provincia</label>
-                <input type="text" 
-                       name="Provincia" 
-                       value="" 
-                       th:field="*{provincia}" 
-                       size="30" />                   
-                <br>
-                
-                
-                <label>Canton</label>
-                <input type="text" 
-                       name="Canton" 
-                       value="" 
-                       th:field="*{canton}" 
-                       size="30" />                   
-                <br>
-                
-                
-                <label>Distrito</label>
-                <input type="text" 
-                       name="Distrito" 
-                       value="" 
-                       th:field="*{distrito}" 
-                       size="30" />                   
-                <br>             
-
-                
-                              
-                
-                    
                 <input type="submit" value="Guardar" />
             </form>
             
