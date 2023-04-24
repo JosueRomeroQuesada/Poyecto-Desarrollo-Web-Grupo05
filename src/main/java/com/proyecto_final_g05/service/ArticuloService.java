@@ -14,6 +14,8 @@ public interface ArticuloService {
     //y lo coloca en una lista de objetos articulo
     public List<Articulo> getArticulos(boolean activos);
     
+
+    
     //Obtiene el registro de la tabla articulo
     //que tiene el idArticulo pasado por el objeto articulo.
     public Articulo getArticulo(Articulo articulo);

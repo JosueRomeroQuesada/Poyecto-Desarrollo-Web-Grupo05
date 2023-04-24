@@ -2,6 +2,7 @@ package com.proyecto_final_g05.service.Impl;
 
 
 import com.proyecto_final_g05.dao.ArticuloDao;
+import com.proyecto_final_g05.dao.CategoriaDao;
 import com.proyecto_final_g05.domain.Articulo;
 import com.proyecto_final_g05.service.ArticuloService;
 import java.util.List;
@@ -26,8 +27,7 @@ public class ArticuloServiceImpl implements ArticuloService{
             if (activos) {
             lista.removeIf(e -> e.isActivo());
         }
-            return lista;
-        
+            return lista;       
     }
 
     @Override

@@ -41,8 +41,7 @@ public class ArticuloController {
         return "/articulo/modifica";
     }
     
-    
-    
+     
     @GetMapping("/nuevo")
     public String nuevoArticulo(Articulo articulo){
         return "/articulo/modifica";
