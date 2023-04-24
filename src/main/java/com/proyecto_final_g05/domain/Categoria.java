@@ -9,6 +9,7 @@ import lombok.Data;
  *
  * @author emers
  */
+
 @Data
 @Entity
 @Table(name="categoria")
